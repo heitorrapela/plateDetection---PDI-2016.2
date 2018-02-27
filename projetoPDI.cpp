@@ -127,7 +127,7 @@ int main( int argc, char **argv )
 
    		std::string imgString = intToString(i);
 		imgString+=".jpg";
-		img = cv::imread(imgString/*"teste.jpg"*/);
+		img = cv::imread("input/" + imgString/*"teste.jpg"*/);
 		
 		histeq(img);
 
