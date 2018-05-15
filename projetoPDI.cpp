@@ -1,9 +1,5 @@
-// Flags to compile in opencv using g++ in linux terminal
 /*
-	You can make an .sh to help -> to use .sh ->
 	script in sh: g++ $1.cpp -o $1 `pkg-config --cflags --libs opencv` && ./$1
-
-	http://rnd.azoft.com/instant-license-plate-recognition-in-ios-apps/
 */
 
 // Libs to use opencv (img process and gui - User interface)
@@ -246,8 +242,6 @@ int main( int argc, char **argv )
 		erode( matCloseImage, matCloseImage, element3 );
 		dilate( matCloseImage, matCloseImage, element2 );
 		
-
-	 
 	    // Split the image into different channels
 	    vector<Mat> rgbChannels(3);
 	    split(img, rgbChannels);
@@ -258,7 +252,6 @@ int main( int argc, char **argv )
 	     
 	    // Showing Red Channel
 	    // G and B channels are kept as zero matrix for visual perception
-	    
 	    vector<Mat> channels;
 	    channels.push_back(rgbChannels[0]);
 	    channels.push_back(rgbChannels[1]);
@@ -268,9 +261,6 @@ int main( int argc, char **argv )
 	    merge(channels, fin_img);
 	    namedWindow("R",1);imshow("R", fin_img);
 		
-        
-
-
 		if(cv::waitKey(0))
 		{
 		//	cv::destroyWindow(imgString);
